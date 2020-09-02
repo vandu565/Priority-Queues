@@ -1,0 +1,29 @@
+bool checkMaxHeap(int arr[], int n){
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Taking input and printing output is handled automatically.
+     */
+    bool k=1;
+    for(int i=0;i<n;i++)
+    {int lc=2*i+1;
+     int rc=2*i+2;
+     if(lc<n )
+     {
+         if(arr[lc]<arr[i])
+         {
+            k=1 ;
+         }
+         else
+         {return false;}
+     }
+     if(rc<n)//not rc<n-1
+     { if(arr[rc]<arr[i])
+        {
+             k=1;
+         }
+         else
+         {return false;}
+    }
+    }
+    return k;
+}
